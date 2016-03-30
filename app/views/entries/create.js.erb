@@ -1,1 +1,2 @@
-$('#tracker').append('<%= j render @entry %>')
+$('#tracker').append('<%= j render @entry %>');
+$('#calorie-total').text('<%= current_user.calories_eaten_today %>');

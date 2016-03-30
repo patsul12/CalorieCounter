@@ -1,8 +1,24 @@
-<div class="col-md-4" id="tracker">
-
+<div class="col-md-4">
+  <h1>Calorie Counter</h1>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>
+          Name
+        </th>
+        <th>
+          TOTAL: <span id="calorie-total"><%= current_user.calories_eaten_today %></span>
+        </th>
+      </tr>
+    </thead>
+    <tbody id="tracker">
+      <%= render @entries %>
+    </tbody>
+  </table>
 </div>
 <div class="col-md-4">
-  <table>
+  <h1>Add a Food</h1>
+  <table class="table table-hover">
     <thead>
       <tr>
         <th>

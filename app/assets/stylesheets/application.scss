@@ -1,0 +1,47 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.field,
+.actions {
+  @extend .form-group;
+}
+
+.field_with_errors {
+  display: inline;
+  @extend .has-error;
+}
+
+label {
+  @extend .control-label;
+}
+
+input {
+  &[type=email],
+  &[type=password],
+  &[type=text],
+  &[type=file],
+  &[type=number] {
+    @extend .form-control;
+  }
+
+  &[type=button] {
+    @extend .btn, .btn-default;
+  }
+
+  &[type=submit] {
+    @extend .btn;
+
+    &[name="commit"] {
+      @extend .btn-success;
+    }
+
+    &.dec-btn-delete {
+      @extend .btn-danger;
+    }
+  }
+}
+
+select,
+textarea {
+  @extend .form-control;
+}
